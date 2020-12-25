@@ -1,11 +1,11 @@
 {
   "name": "jeelangahelper",
-  "version": "2.0.0",
-  "description": "Bot for moderate Discord-server.",
-  "main": "./cash/src/app.js",
+  "version": "1.0.3",
+  "description": "Jeelanga Helper by LWJerri for moderating server.",
+  "main": "app.js",
   "scripts": {
-    "start": "tsc && node ./cash/src/app.js",
-    "dev": "nodemon"
+    "start": "node app.js",
+    "dev": "nodemon ."
   },
   "engines": {
     "node": "12.x"
@@ -14,17 +14,9 @@
   "author": "LWJerri",
   "license": "MIT",
   "dependencies": {
-    "@satont/spamnya": "github:satont/spamnya",
-    "@satont/text-utils": "^1.0.6",
-    "discord.js": "^12.5.1",
+    "discord.js": "^12.2.0",
     "dotenv": "^8.2.0",
-    "i": "^0.3.6",
-    "nodemon": "^2.0.6",
-    "npm": "^6.14.10",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.1.3"
-  },
-  "devDependencies": {
-    "@types/node": "^14.14.14"
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
   }
 }
