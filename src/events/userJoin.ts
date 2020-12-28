@@ -14,5 +14,5 @@ export async function memberAdd(member: GuildMember){
         .setFooter(lang.member.join, guild.iconURL({ size: 4096, dynamic: true }));
 
     const channel = bot.channels.cache.get(process.env.AdminChannel) as TextChannel;
-    await channel.send(NewMember);
+    await channel.send(NewMember).catch(err => console.error(err));
 }
