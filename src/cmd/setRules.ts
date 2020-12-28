@@ -1,5 +1,5 @@
 import { Message, TextChannel } from "discord.js";
-import messages from "../../messages.json";
+import messages from "../messages.json";
 import { bot } from "../app";
 
 export async function setRules(message: Message){
