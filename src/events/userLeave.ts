@@ -14,5 +14,5 @@ export async function memberRemove(member: GuildMember){
         .setFooter(lang.member.leave, guild.iconURL({ size: 4096, dynamic: true }));
 
     const channel = bot.channels.cache.get(process.env.AdminChannel) as TextChannel;
-    await channel.send(OldMember);
+    await channel.send(OldMember).catch(err => console.error(err));
 }
