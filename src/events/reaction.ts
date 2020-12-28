@@ -4,6 +4,8 @@ import { MessageEmbed, MessageReaction, PartialUser, TextChannel } from "discord
 import { bot, lang } from "../app";
 
 export async function memberReact(reaction: MessageReaction, user: PartialUser){
+    if(reaction.me) return;
+    
     const guild = bot.guilds.cache.get(reaction.message.guild.id);
     const member = guild.members.cache.get(user.id);
     const ticketName = member.roles.cache.has(process.env.PremiumRole) ? `premium-${user.id}` : `default-${user.id}`;
@@ -11,7 +13,7 @@ export async function memberReact(reaction: MessageReaction, user: PartialUser){
     if(reaction.message.channel.id == process.env.SupportChannel && reaction.emoji.name == process.env.CreateReaction){
         if(bot.channels.cache.find((x: TextChannel) => x.name == ticketName)){
             const channel = bot.channels.cache.get(bot.channels.cache.find((x: TextChannel) => x.name == ticketName).id) as TextChannel;
-            await channel.send(`${member}, ${lang.ticket.alreadyExist}`);
+            await channel.send(`${member}, ${lang.ticket.alreadyExist}`).catch(err => console.error(err));
         
             return;
         }
@@ -39,9 +41,10 @@ export async function memberReact(reaction: MessageReaction, user: PartialUser){
                 "MANAGE_MESSAGES": false,
                 "READ_MESSAGE_HISTORY": true,
                 "SEND_TTS_MESSAGES": false
-            });
+            }).catch(err => console.error(err));
         }).then(async () => {
             const channel = bot.channels.cache.get(bot.channels.cache.find((x: TextChannel) => x.name == ticketName).id) as TextChannel;
+            
             const CloseTicket = new MessageEmbed()
                 .setColor(process.env.EmbedGreen)
                 .setTimestamp()
@@ -49,7 +52,7 @@ export async function memberReact(reaction: MessageReaction, user: PartialUser){
                 .setDescription(lang.ticket.description)
                 .setFooter(lang.ticket.ticketSystem, member.user.displayAvatarURL({ "dynamic": true, "size": 4096 }));
             
-            await (await channel.send({ "embed": CloseTicket })).react(process.env.DeleteReaction);
+            await (await channel.send({ "embed": CloseTicket })).react(process.env.DeleteReaction).catch(err => console.error(err));
         });
     }
 
@@ -59,7 +62,7 @@ export async function memberReact(reaction: MessageReaction, user: PartialUser){
 
         if(reaction.message.channel.id == bot.channels.cache.find((x: TextChannel) => x.name == ticketName).id){
             const channel = bot.channels.cache.get(bot.channels.cache.find((x: TextChannel) => x.name == ticketName).id);
-            await channel.delete();
+            await channel.delete().catch(err => console.error(err));
         }
     }
 }
