@@ -26,5 +26,5 @@ export async function helpCMD(message: Message){
         .setFooter(lang.helpMenu.name, guild.iconURL({ size: 4096, dynamic: true }));
 
     const output = await message.channel.send({ "embed": HelpEmbed });
-    await output.delete({ "timeout": 30000 }).catch(err => console.error(err));
+    await output.delete({ "timeout": 60000 }).catch(err => console.error(err));
 }
