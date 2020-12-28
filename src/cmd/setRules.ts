@@ -4,6 +4,7 @@ import { bot } from "../app";
 
 export async function setRules(message: Message){
     await message.delete().catch(err => console.error(err));
+    if(message.author.id != process.env.OwnerID) return;
     
     const channel = bot.channels.cache.get(process.env.RulesChannel) as TextChannel;
     await channel.send(messages.description).catch(err => console.error(err));

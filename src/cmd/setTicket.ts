@@ -3,6 +3,7 @@ import { bot, lang } from "../app";
 
 export async function setTicket(message: Message){
     await message.delete().catch(err => console.error(err));
+    if(message.author.id != process.env.OwnerID) return;
 
     const guild = bot.guilds.cache.get(message.guild.id);
 

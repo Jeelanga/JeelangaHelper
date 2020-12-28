@@ -3,6 +3,7 @@ import { lang } from "../app";
 
 export async function banMember(message: Message){
     await message.delete().catch(err => console.error(err));
+    if(message.author.id != process.env.OwnerID) return;
     
     const messageArray = message.content.split(" ");
     const args = messageArray.slice(1);

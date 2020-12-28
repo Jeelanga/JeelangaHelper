@@ -4,6 +4,7 @@ import time from "humanize-duration";
 
 export async function helpCMD(message: Message){
     await message.delete().catch(err => console.error(err));
+    if(message.author.id != process.env.OwnerID) return;
 
     const guild = bot.guilds.cache.get(message.guild.id);
 
