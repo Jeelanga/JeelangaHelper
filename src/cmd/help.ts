@@ -3,7 +3,7 @@ import { bot, lang } from "../app";
 import time from "humanize-duration";
 
 export async function helpCMD(message: Message){
-    await message.delete();
+    await message.delete().catch(err => console.error(err));
 
     const guild = bot.guilds.cache.get(message.guild.id);
 
@@ -25,6 +25,6 @@ export async function helpCMD(message: Message){
         )
         .setFooter(lang.helpMenu.name, guild.iconURL({ size: 4096, dynamic: true }));
 
-    const msg = await message.channel.send({ "embed": HelpEmbed });
-    await msg.delete({ timeout: 30000 });
+    const output = await message.channel.send({ "embed": HelpEmbed });
+    await output.delete({ "timeout": 30000 }).catch(err => console.error(err));
 }
