@@ -2,9 +2,9 @@
   "name": "jeelangahelper",
   "version": "2.0.0",
   "description": "Jeelanga Helper - Special bot for help moderate support server.",
-  "main": "./cash/src/app.js",
+  "main": "./cash/app.js",
   "scripts": {
-    "start": "rimraf cash && tsc && node ./cash/src/app.js",
+    "start": "rimraf cash && tsc && node ./cash/app.js",
     "dev": "nodemon"
   },
   "engines": {
