@@ -11,7 +11,7 @@ export async function setTicket(message: Message){
         .setTimestamp()
         .setThumbnail(guild.iconURL({ "size": 4096, "dynamic": true }))
         .setColor(process.env.EmbedGreen)
-        .setTitle(`${bot.user.username} » ${lang.ticket.setup}`)
+        .setTitle(`${bot.user.username} » ${lang.ticket.title}`)
         .setDescription(lang.ticket.create)
         .setFooter(lang.helpMenu.name, guild.iconURL({ size: 4096, dynamic: true }));
 
