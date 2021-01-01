@@ -1,6 +1,6 @@
 {
   "name": "jeelangahelper",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Jeelanga Helper - Special bot for help moderate support server.",
   "main": "./cash/app.js",
   "scripts": {
@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@types/humanize-duration": "^3.18.1",
-    "@types/node": "^14.14.16",
+    "@types/node": "^14.14.17",
     "@types/source-map-support": "^0.5.3"
   }
 }
