@@ -8,7 +8,7 @@ import { memberAdd } from "./events/userJoin";
 import { memberRemove } from "./events/userLeave";
 import { memberReact } from "./events/reaction";
 
-export const lang = require(`../localization/${process.env.language ? process.env.language : "ru"}.json`);
+export const lang = require(`../localization/${process.env.language}.json`);
 export const bot = new Client({
     "disableMentions": "none",
     "partials": [
