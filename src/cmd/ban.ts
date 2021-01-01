@@ -5,23 +5,34 @@ export async function banMember(message: Message){
     await message.delete().catch(err => console.error(err));
     if(message.author.id != process.env.OwnerID) return;
     
-    const messageArray = message.content.split(" ");
-    const args = messageArray.slice(1);
+    const args = message.content.split(" ");
     
-    if(!args[0]) return message.channel.send(lang.moderation.noUser)
-        .then(msg => msg.delete({ "timeout": 60000 }))
-        .catch(err => console.error(err));
+    if(!args[1]){
+        const msg = await message.channel.send(lang.moderation.noUser);
+        await msg.delete({ "timeout": 60000 }).catch(err => console.error(err));
+
+        return;
+    }
 
     const user = message.mentions.users.first();
-    const reason = args[1] ? args[1] : lang.moderation.noReason;
+    const reason = args[2] ? args[2] : lang.moderation.noReason;
     const member = message.guild.member(user);
+    const typeStaff = args[0].includes("ban") ? lang.moderation.ban : undefined;
+    const typeUser = args[0].includes("ban") ? lang.moderation.banU : undefined;
 
-    if(member.hasPermission("ADMINISTRATOR")) return message.channel.send(lang.moderation.staff)
-        .then(msg => msg.delete({ "timeout": 60000 }))
-        .catch(err => console.error(err));
+    if(member.hasPermission("ADMINISTRATOR")){
+        const blockAction = lang.moderation.staff.replace("{{ action }}", typeStaff)
 
-    await member.send(`${lang.moderation.banned} **${reason}**`)
-    .then(async () => {
-        await member.ban({ "reason": reason });
-    }).catch(err => console.error(err));
+        const msg = await message.channel.send(blockAction);
+        await msg.delete({ "timeout": 60000 }).catch(err => console.error(err));
+
+        return;
+    }
+
+    const banMessage = lang.moderation.action
+        .replace("{{ action }}", typeUser)
+        .replace("{{ reason }}", reason)
+
+    member.send(banMessage).catch(err => console.error(err));
+    member.ban({ "reason": reason }).catch(err => console.error(err));
 }
