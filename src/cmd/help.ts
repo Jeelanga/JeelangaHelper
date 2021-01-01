@@ -20,6 +20,7 @@ export async function helpCMD(message: Message){
             { name: lang.helpMenu.ticketCMD[0], value: lang.helpMenu.ticketCMD[1], inline: true },
             { name: lang.helpMenu.kickCMD[0], value: lang.helpMenu.kickCMD[1], inline: true },
             { name: lang.helpMenu.banCMD[0], value: lang.helpMenu.banCMD[1], inline: true },
+            { name: lang.helpMenu.editCMD[0], value: lang.helpMenu.editCMD[1], inline: true },
             { name: lang.helpMenu.ping, value: bot.ws.ping, inline: true },
             { name: lang.helpMenu.users, value: bot.users.cache.size, inline: true },
             { name: lang.helpMenu.uptime, value: time(bot.uptime, { "language": process.env.language, "round": true }), inline: true },

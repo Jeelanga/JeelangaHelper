@@ -1,0 +1,70 @@
+{
+    "helpMenu": {
+        "name": "Help menu",
+        "ping": "Ping (ms)",
+        "users": "Members",
+        "uptime": "Uptime",
+        
+        "helpCMD": [
+            "help",
+            "Show this menu."
+        ],
+
+        "welcomeCMD": [
+            "set-welcome",
+            "Send welcome message."
+        ],
+
+        "rulesCMD": [
+            "set-rules",
+            "Send rules message."
+        ],
+
+        "ticketCMD": [
+            "set-ticket",
+            "Send ticket message."
+        ],
+
+        "kickCMD": [
+            "kick @user [Message]",
+            "Kick member with server."
+        ],
+
+        "banCMD": [
+            "ban @user [Message]",
+            "Ban member on this server."
+        ],
+
+        "editCMD": [
+            "edit [MESSAGE_ID] [Message]",
+            "Edit bot message."
+        ]
+    },
+
+    "ticket": {
+        "topic": "You personal private channel for contact with developer.",
+        "userDescription": "Try describing your problem or question as accurately as possible, to promptly get an answer!",
+        "create": "Click on reaction to create a ticket!\n\n1) Please indicate UUET (Unique User Error Token) if you have it.\n2) Maximal describe your problem.\n3) Add photo/video.",
+        "alreadyExist": "You already created a ticket! Please, describe your problem or wait an answer from the developer!",
+        "title": "Creating a ticket",
+        "ticketSystem": "Ticket system"
+    },
+
+    "moderation": {
+        "staff": "You can't {{ action }} this account!",
+        "noUser": "You do not provide member!",
+        "noReason": "not provided.",
+        "action": "You are {{ action }}! Reason: {{ reason }}",
+        "ban": "ban",
+        "banU": "banned",
+        "kick": "kick",
+        "kickU": "kicked",
+        "reasons": ["spam", "caps", "publish URL"]
+    },
+
+    "member": {
+        "join": "Joined on this server",
+        "leave": "Leave from this server",
+        "deleted": "Your message deleted! Reason: {{ reason }}"
+    }
+}
