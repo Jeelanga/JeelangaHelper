@@ -1,4 +1,4 @@
 node_modules
 .env
 cash
-/src/messages.json
+messages.json
