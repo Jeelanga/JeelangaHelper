@@ -1,0 +1,7 @@
+{
+    "prettier.printWidth": 100,
+    "prettier.semi": false,
+    "prettier.useTabs": true,
+    "prettier.vueIndentScriptAndStyle": true,
+    "prettier.withNodeModules": true
+}
