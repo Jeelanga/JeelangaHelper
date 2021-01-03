@@ -26,12 +26,12 @@
         ],
 
         "kickCMD": [
-            "kick @user [Message]",
+            "kick @user [Reason]",
             "Kick member with server."
         ],
 
         "banCMD": [
-            "ban @user [Message]",
+            "ban @user [Reason]",
             "Ban member on this server."
         ],
 
