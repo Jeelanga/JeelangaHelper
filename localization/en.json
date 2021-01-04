@@ -26,23 +26,23 @@
         ],
 
         "kickCMD": [
-            "kick @user [Message]",
+            "kick @user [Reason]",
             "Kick member with server."
         ],
 
         "banCMD": [
-            "ban @user [Message]",
+            "ban @user [Reason]",
             "Ban member on this server."
         ],
 
         "editCMD": [
-            "edit [MESSAGE_ID] [Message]",
+            "edit [MESSAGE_ID] [New message]",
             "Edit bot message."
         ]
     },
 
     "ticket": {
-        "topic": "You personal private channel for contact with developer.",
+        "topic": "Your personal private channel for contact with developer.",
         "userDescription": "Try describing your problem or question as accurately as possible, to promptly get an answer!",
         "create": "Click on reaction to create a ticket!\n\n1) Please indicate UUET (Unique User Error Token) if you have it.\n2) Maximal describe your problem.\n3) Add photo/video.",
         "alreadyExist": "You already created a ticket! Please, describe your problem or wait an answer from the developer!",
@@ -59,7 +59,11 @@
         "banU": "banned",
         "kick": "kick",
         "kickU": "kicked",
-        "reasons": ["spam", "caps", "publish URL"]
+        "reasons": {
+            "spam": "spam",
+            "caps": "caps",
+            "urls": "publish URL"
+        }
     },
 
     "member": {
