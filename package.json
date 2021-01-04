@@ -1,10 +1,10 @@
 {
   "name": "jeelangahelper",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Jeelanga Helper - Special bot for help moderate support server.",
-  "main": "./cash/app.js",
+  "main": "./cash/src/app.js",
   "scripts": {
-    "start": "rimraf cash && tsc && node ./cash/app.js",
+    "start": "rimraf cash && tsc && node ./cash/src/app.js",
     "dev": "nodemon"
   },
   "engines": {
@@ -20,6 +20,8 @@
     "dotenv": "^8.2.0",
     "humanize-duration": "^3.25.0",
     "nodemon": "^2.0.6",
+    "path": "^0.12.7",
+    "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
     "source-map-support": "^0.5.19",
     "ts-node": "^9.1.1",
