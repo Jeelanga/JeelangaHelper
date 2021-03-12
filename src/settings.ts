@@ -2,8 +2,8 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const envConf = {
-    language: process.env.language,
-    token: process.env.token,
+    Language: process.env.Language,
+    Token: process.env.Token,
     EmbedGreen: process.env.EmbedGreen,
     EmbedRed: process.env.EmbedRed,
     AdminChannel: process.env.AdminChannel,

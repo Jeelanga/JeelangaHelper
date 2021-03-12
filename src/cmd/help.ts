@@ -59,7 +59,7 @@ export async function helpCMD(message: Message) {
             {
                 name: lang.helpMenu.uptime,
                 value: time(bot.uptime, {
-                    language: envConf.language,
+                    language: envConf.Language,
                     round: true,
                 }),
                 inline: true,

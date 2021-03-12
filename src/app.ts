@@ -9,14 +9,14 @@ import { envConf } from "./settings";
 import path from "path";
 
 export const lang = require(`${path.resolve()}/localization/${
-    envConf.language
+    envConf.Language
 }.json`);
 export const bot = new Client({
     disableMentions: "none",
     partials: ["CHANNEL", "GUILD_MEMBER", "MESSAGE", "REACTION", "USER"],
 });
 
-bot.login(envConf.token);
+bot.login(envConf.Token);
 
 bot.on("ready", readyEvent);
 bot.on("guildMemberAdd", memberAdd);
