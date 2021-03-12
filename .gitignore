@@ -2,3 +2,4 @@ node_modules
 .env
 cash
 messages.json
+package-lock.json
