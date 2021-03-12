@@ -4,41 +4,20 @@
         "ping": "Ping (ms)",
         "users": "Members",
         "uptime": "Uptime",
-        
-        "helpCMD": [
-            "help",
-            "Show this menu."
-        ],
 
-        "welcomeCMD": [
-            "set-welcome",
-            "Send welcome message."
-        ],
+        "helpCMD": ["help", "Show this menu."],
 
-        "rulesCMD": [
-            "set-rules",
-            "Send rules message."
-        ],
+        "welcomeCMD": ["set-welcome", "Send welcome message."],
 
-        "ticketCMD": [
-            "set-ticket",
-            "Send ticket message."
-        ],
+        "rulesCMD": ["set-rules", "Send rules message."],
 
-        "kickCMD": [
-            "kick @user [Reason]",
-            "Kick member with server."
-        ],
+        "ticketCMD": ["set-ticket", "Send ticket message."],
 
-        "banCMD": [
-            "ban @user [Reason]",
-            "Ban member on this server."
-        ],
+        "kickCMD": ["kick @user [Reason]", "Kick member with server."],
 
-        "editCMD": [
-            "edit [MESSAGE_ID] [New message]",
-            "Edit bot message."
-        ]
+        "banCMD": ["ban @user [Reason]", "Ban member on this server."],
+
+        "editCMD": ["edit [MESSAGE_ID] [New message]", "Edit bot message."]
     },
 
     "ticket": {
