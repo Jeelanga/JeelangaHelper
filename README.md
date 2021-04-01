@@ -8,6 +8,7 @@ Jeelanga Helper - Special bot for help moderate support server.
 2. **Confurate file**
 
 ```js
+Prefix= // Personal bot prefix for all commands
 Language= // Support ru, en or ua
 Token= // Discord bot token (https://discord.com/developers/applications)
 EmbedGreen= // Color in "#ff0000"
