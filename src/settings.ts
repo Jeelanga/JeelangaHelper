@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export const envConf = {
+    Prefix: process.env.Prefix,
     Language: process.env.Language,
     Token: process.env.Token,
     EmbedGreen: process.env.EmbedGreen,
