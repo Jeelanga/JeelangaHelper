@@ -24,14 +24,15 @@ export async function messageEvent(message: Message) {
 
     const messageArray = message.content.split(" ");
     const litter = messageArray[0].toLowerCase();
+    const prefix = envConf.Prefix;
 
-    if (litter == "help") return helpCMD(message);
-    if (litter == "set-welcome") return setWelcome(message);
-    if (litter == "set-rules") return setRules(message);
-    if (litter == "set-ticket") return setTicket(message);
-    if (litter == "kick") return kickMember(message);
-    if (litter == "ban") return banMember(message);
-    if (litter == "edit") return editMessage(message);
+    if (litter == `${prefix}help`) return helpCMD(message);
+    if (litter == `${prefix}set-welcome`) return setWelcome(message);
+    if (litter == `${prefix}set-rules`) return setRules(message);
+    if (litter == `${prefix}set-ticket`) return setTicket(message);
+    if (litter == `${prefix}kick`) return kickMember(message);
+    if (litter == `${prefix}ban`) return banMember(message);
+    if (litter == `${prefix}edit`) return editMessage(message);
 
     if (
         message.channel.parent.id == envConf.TicketCategory ||
