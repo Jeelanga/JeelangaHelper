@@ -5,19 +5,19 @@
         "users": "Members",
         "uptime": "Uptime",
 
-        "helpCMD": ["help", "Show this menu."],
+        "helpCMD": ["{0}help", "Show this menu."],
 
-        "welcomeCMD": ["set-welcome", "Send welcome message."],
+        "welcomeCMD": ["{0}set-welcome", "Send welcome message."],
 
-        "rulesCMD": ["set-rules", "Send rules message."],
+        "rulesCMD": ["{0}set-rules", "Send rules message."],
 
-        "ticketCMD": ["set-ticket", "Send ticket message."],
+        "ticketCMD": ["{0}set-ticket", "Send ticket message."],
 
-        "kickCMD": ["kick @user [Reason]", "Kick member with server."],
+        "kickCMD": ["{0}kick @user [Reason]", "Kick member with server."],
 
-        "banCMD": ["ban @user [Reason]", "Ban member on this server."],
+        "banCMD": ["{0}ban @user [Reason]", "Ban member on this server."],
 
-        "editCMD": ["edit [MESSAGE_ID] [New message]", "Edit bot message."]
+        "editCMD": ["{0}edit [MESSAGE_ID] [New message]", "Edit bot message."]
     },
 
     "ticket": {
