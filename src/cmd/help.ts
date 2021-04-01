@@ -16,37 +16,40 @@ export async function helpCMD(message: Message) {
         .setTitle(`${bot.user.username} » ${lang.helpMenu.name}`)
         .addFields(
             {
-                name: lang.helpMenu.helpCMD[0],
+                name: lang.helpMenu.helpCMD[0].replace("{0}", envConf.Prefix),
                 value: lang.helpMenu.helpCMD[1],
                 inline: true,
             },
             {
-                name: lang.helpMenu.welcomeCMD[0],
+                name: lang.helpMenu.welcomeCMD[0].replace(
+                    "{0}",
+                    envConf.Prefix
+                ),
                 value: lang.helpMenu.welcomeCMD[1],
                 inline: true,
             },
             {
-                name: lang.helpMenu.rulesCMD[0],
+                name: lang.helpMenu.rulesCMD[0].replace("{0}", envConf.Prefix),
                 value: lang.helpMenu.rulesCMD[1],
                 inline: true,
             },
             {
-                name: lang.helpMenu.ticketCMD[0],
+                name: lang.helpMenu.ticketCMD[0].replace("{0}", envConf.Prefix),
                 value: lang.helpMenu.ticketCMD[1],
                 inline: true,
             },
             {
-                name: lang.helpMenu.kickCMD[0],
+                name: lang.helpMenu.kickCMD[0].replace("{0}", envConf.Prefix),
                 value: lang.helpMenu.kickCMD[1],
                 inline: true,
             },
             {
-                name: lang.helpMenu.banCMD[0],
+                name: lang.helpMenu.banCMD[0].replace("{0}", envConf.Prefix),
                 value: lang.helpMenu.banCMD[1],
                 inline: true,
             },
             {
-                name: lang.helpMenu.editCMD[0],
+                name: lang.helpMenu.editCMD[0].replace("{0}", envConf.Prefix),
                 value: lang.helpMenu.editCMD[1],
                 inline: true,
             },
