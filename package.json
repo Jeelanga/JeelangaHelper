@@ -1,7 +1,7 @@
 {
     "name": "jeelangahelper",
-    "version": "2.0.3",
-    "description": "Jeelanga Helper - Special bot for help moderate support server.",
+    "version": "2.0.4",
+    "description": "Special bot for help moderate support server.",
     "main": "./cash/src/app.js",
     "scripts": {
         "start": "rimraf cash && tsc && node ./cash/src/app.js",
@@ -17,7 +17,7 @@
         "@satont/spamnya": "^2.0.1",
         "@satont/text-utils": "^1.0.7",
         "@types/humanize-duration": "^3.18.1",
-        "@types/node": "^14.14.34",
+        "@types/node": "^14.14.37",
         "@types/source-map-support": "^0.5.3",
         "discord.js": "^12.5.2",
         "dotenv": "^8.2.0",
