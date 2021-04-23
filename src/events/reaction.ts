@@ -39,7 +39,7 @@ export async function memberReact(
             topic: lang.ticket.topic,
             nsfw: false,
             parent: envConf.TicketCategory,
-            position: 0,
+            position: 1,
         });
 
         await userTicket
