@@ -15,7 +15,7 @@ export async function clearCommand(message: Message | any) {
         return;
 
     await message.channel
-        .bulkDelete(args[0])
+        .bulkDelete(parseInt(args[1]))
         .catch((err: any) => console.error(err));
 
     return;
