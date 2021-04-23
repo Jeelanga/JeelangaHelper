@@ -53,6 +53,16 @@ export async function helpCMD(message: Message) {
                 value: lang.helpMenu.editCMD[1],
                 inline: true,
             },
+            {
+                name: lang.helpMenu.closeCMD[0].replace("{0}", envConf.Prefix),
+                value: lang.helpMenu.closeCMD[1],
+                inline: true,
+            },
+            {
+                name: lang.helpMenu.clearCMD[0].replace("{0}", envConf.Prefix),
+                value: lang.helpMenu.clearCMD[1],
+                inline: true,
+            },
             { name: lang.helpMenu.ping, value: bot.ws.ping, inline: true },
             {
                 name: lang.helpMenu.users,
