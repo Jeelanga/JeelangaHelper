@@ -1,6 +1,6 @@
 {
     "name": "jeelangahelper",
-    "version": "2.0.4",
+    "version": "2.0.5",
     "description": "Special bot for help moderate support server.",
     "main": "./cash/src/app.js",
     "scripts": {
@@ -15,19 +15,19 @@
     "license": "MIT",
     "dependencies": {
         "@satont/spamnya": "^2.0.1",
-        "@satont/text-utils": "^1.0.7",
+        "@satont/text-utils": "^1.0.8",
         "@types/humanize-duration": "^3.18.1",
-        "@types/node": "^14.14.37",
+        "@types/node": "^14.14.41",
         "@types/source-map-support": "^0.5.3",
-        "discord.js": "^12.5.2",
+        "discord.js": "^12.5.3",
         "dotenv": "^8.2.0",
-        "humanize-duration": "^3.25.1",
+        "humanize-duration": "^3.25.2",
         "nodemon": "^2.0.7",
         "path": "^0.12.7",
         "prettier": "^2.2.1",
         "rimraf": "^3.0.2",
         "source-map-support": "^0.5.19",
         "ts-node": "^9.1.1",
-        "typescript": "^4.2.3"
+        "typescript": "^4.2.4"
     }
 }
