@@ -10,6 +10,8 @@ import { banMember } from "../cmd/ban";
 import { lang } from "../app";
 import { editMessage } from "../cmd/edit";
 import { envConf } from "../settings";
+import { closeTicket } from "../cmd/close";
+import { clearCommand } from "../cmd/clear";
 
 export async function messageEvent(message: Message) {
     if (message.author.bot || message.channel.type == "dm") return;
@@ -33,6 +35,8 @@ export async function messageEvent(message: Message) {
     if (litter == `${prefix}kick`) return kickMember(message);
     if (litter == `${prefix}ban`) return banMember(message);
     if (litter == `${prefix}edit`) return editMessage(message);
+    if (litter == `${prefix}close`) return closeTicket(message);
+    if (litter == `${prefix}clear`) return clearCommand(message);
 
     if (
         message.channel.parent.id == envConf.TicketCategory ||
@@ -55,7 +59,11 @@ export async function messageEvent(message: Message) {
         await msg
             .delete({ timeout: 60000 })
             .catch((err: any) => console.error(err));
-    } else if (caps.isCapsed(message.content, { percentage: 50 })) {
+
+        return;
+    }
+
+    if (caps.isCapsed(message.content, { percentage: 50 })) {
         await message.delete().catch((err: any) => console.error(err));
 
         const content = lang.member.deleted.replace(
@@ -66,7 +74,11 @@ export async function messageEvent(message: Message) {
         await msg
             .delete({ timeout: 60000 })
             .catch((err: any) => console.error(err));
-    } else if (link.includes(message.content, { withSpaces: true })) {
+
+        return;
+    }
+
+    if (link.includes(message.content)) {
         await message.delete().catch((err: any) => console.error(err));
 
         const content = lang.member.deleted.replace(
@@ -77,5 +89,7 @@ export async function messageEvent(message: Message) {
         await msg
             .delete({ timeout: 60000 })
             .catch((err: any) => console.error(err));
+
+        return;
     }
 }
