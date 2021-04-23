@@ -17,7 +17,11 @@
 
         "banCMD": ["{0}ban @user [Reason]", "Ban member on this server."],
 
-        "editCMD": ["{0}edit [MESSAGE_ID] [New message]", "Edit bot message."]
+        "editCMD": ["{0}edit [MESSAGE_ID] [New message]", "Edit bot message."],
+
+        "closeCMD": ["{0}close", "CLose user ticket."],
+
+        "clearCMD": ["{0}clear [Num. of messages]", "Delete messages."]
     },
 
     "ticket": {
