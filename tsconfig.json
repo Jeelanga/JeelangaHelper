@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "./cash/",
+        "outDir": "./dist/",
         "target": "ESNext",
         "module": "commonjs",
         "inlineSourceMap": true,
