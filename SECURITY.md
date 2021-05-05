@@ -1,4 +1,4 @@
-## Support versions list
+## Supports versions list
 
 | Version | Supported          |
 | ------- | ------------------ |
